@@ -1,0 +1,18 @@
+services:
+  - type: worker
+    name: uzbek-music-bot
+    env: python
+    # ffmpeg is required for mp3 conversion; install it before pip packages
+    buildCommand: "apt-get update -y && apt-get install -y ffmpeg && pip install -r requirements.txt"
+    startCommand: "python bot.py"
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        sync: false
+      - key: CHANNEL_USERNAME
+        value: "@aaaaaallllllllliiiii"
+    disk:
+      name: bot-data
+      mountPath: /opt/render/project/src
+      sizeGB: 1

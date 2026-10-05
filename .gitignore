@@ -1,0 +1,14 @@
+
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.db
+*.sqlite3
+downloads/
+*.mp3
+*.mp4
+*.webm
+*.m4a
